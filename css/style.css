@@ -24,10 +24,10 @@ body {
   margin-left: 20px;
   overflow: hidden;
 }
-.dynamic-text li {
+.dynamic-text li span {
   list-style: none;
   color: red;
-  padding-right: 40px;
+
   font-size: 60px;
   font-weight: 700;
   line-height: 75px;
@@ -37,7 +37,7 @@ body {
   top: 0;
   animation: slide 16s steps(4) infinite;
 }
-.dynamic-text li::after {
+.dynamic-text li span::after {
   content: "";
   position: absolute;
   left: 0;
@@ -56,6 +56,10 @@ body {
 
 @keyframes typing {
   60% {
+    left: 100%;
+  }
+  60%,
+  80% {
     left: 100%;
   }
   100% {
